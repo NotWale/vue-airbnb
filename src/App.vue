@@ -1,8 +1,8 @@
 <template>
-  <div class="mt-20 sm:mx-4 md:mx-22 lg:mx-28">
+  <div class="mt-20 sm:mx-4 md:mx-28 mx-2">
     <Navbar @open-menu-drop="toggleMenuDrop()" />
-    <div class="float-right" v-show="showDropMenu" >
-      <MenuDrop />
+    <div class="float-right" >
+      <MenuDrop v-show="showDropMenu" />
     </div>
     <SideMenu />
     <Main />
@@ -28,30 +28,22 @@ export default {
   },
   data() {
     return {
-      tasks: [],
       showDropMenu: false,
+      showBigSearch: false,
     }
   },
   methods: {
     toggleMenuDrop() {
-      console.log("Changing showDropMenu to " + this.showDropMenu);
     	this.showDropMenu = !this.showDropMenu;
     },
     closeMenuDrop(e){
       if (!this.$el.contains(e.target)) {
-        console.log("Closing Menu Drop");
         this.showDropMenu = false;
-        console.log("Menu Drop = " + this.showDropMenu);
       }
     },
-    addTask(task) {
-      this.tasks = [...this.tasks, task]
+    openSearch() {
+    	this.showBigSearch = !this.showBigSearch;
     },
-    deleteTask(id) {
-      if(confirm('Are you sure?')){
-        this.tasks = this.tasks.filter((task) => task.id !== id)
-      }
-    }
   },
   created() {
     window.addEventListener("click", this.closeMenuDrop);
