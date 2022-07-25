@@ -1,5 +1,5 @@
 <template>
-    <div class="flex ml-2 -mr-2 lg:ml-24 lg:-mr-24 rounded-full border-[1px] px-2 py-2 border-gray-400 shadow-lg box-border">
+    <div class="flex rounded-full border-[1px] px-2 py-2 border-gray-400 shadow-lg box-border">
         <button class="font-semibold text-sm my-1 mx-2 w-24 border-r-[1px]">Anywhere</button>
         <button class="font-semibold text-sm my-1 mx-2 w-24 border-r-[1px]">Any Week</button>
         <button class="font-light text-sm my-1 mx-1 w-24">Add Guests</button>

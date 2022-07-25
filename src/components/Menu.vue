@@ -1,5 +1,5 @@
 <template>
-    <div class="flex my-1">
+    <div class="flex my-1 mr-56">
         <button class="font-semibold text-sm px-2 py-2 rounded-full hover:bg-gray-100">Become a Host</button>
         <button class="hover:bg-gray-100 rounded-full w-9 h-9 my-1">
             <i class="fa fa-globe fa-sm text-black" aria-hidden="true"></i>

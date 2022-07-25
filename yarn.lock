@@ -5442,6 +5442,11 @@ vue-cli-plugin-tailwind@~3.0.0:
   resolved "https://registry.npmmirror.com/vue-cli-plugin-tailwind/-/vue-cli-plugin-tailwind-3.0.0.tgz#2436e781e919acab9539934549999baf33e0a099"
   integrity sha512-bUWjfwGtJCeBU7pL4lD86RC+HsJAmAlYqr8e65NGC3q/ZBzC9KQs1Iy/vTyfDTnB7ZJm3huB+1a/m+17fdMZ8A==
 
+vue-dragscroll@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/vue-dragscroll/-/vue-dragscroll-3.0.1.tgz#572c68ca021209accf8fe6f1bc7540c627c26453"
+  integrity sha512-4Oq3S1RGm94YMy/DcjcvM+itRLoTGnKaxlpUUVICPPkNEvMMKzArZUNDXxmDInVa8t4GtrfM0uGAShFP+0JIUw==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npmmirror.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"

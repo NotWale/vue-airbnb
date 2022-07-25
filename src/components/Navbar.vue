@@ -1,5 +1,5 @@
 <template>
-    <div class="border-b-[1px] border-gray-200 py-4">
+    <div class="border-b-[1px] border-gray-200 py-4 fixed overflow-hidden top-0 w-full bg-white z-50">
         <div class="flex justify-between">
             <img class="mt-[3px] w-10 h-10" src="../assets/airbnb-logo.jpg" alt="airbnb-logo">
             <Search />

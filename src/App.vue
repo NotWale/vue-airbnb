@@ -1,29 +1,30 @@
 <template>
-<div class="sm:mx-4 md:mx-22 lg:mx-28 ">
-  <Navbar @open-menu-drop="toggleMenuDrop()" />
-  <div class="float-right" v-show="showDropMenu" :class="{'is-active': showDropMenu}">
-    <MenuDrop />
+  <div class="mt-20 sm:mx-4 md:mx-22 lg:mx-28">
+    <Navbar @open-menu-drop="toggleMenuDrop()" />
+    <div class="float-right" v-show="showDropMenu" >
+      <MenuDrop />
+    </div>
+    <SideMenu />
+    <Main />
+    <Footer />
   </div>
-  <div v-show="showAddTask">
-    <AddTask @add-task="addTask" />
-  </div>
-  <Tasks @delete-task="deleteTask" :tasks="tasks"/>
-</div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
-import Tasks from './components/Tasks.vue'
-import AddTask from './components/AddTask.vue'
 import MenuDrop from './components/MenuDrop.vue'
+import SideMenu from './components/SideMenu.vue'
+import Main from './components/Main.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    Tasks,
-    AddTask,
     MenuDrop,
+    SideMenu,
+    Main,
+    Footer
   },
   data() {
     return {
@@ -33,11 +34,14 @@ export default {
   },
   methods: {
     toggleMenuDrop() {
+      console.log("Changing showDropMenu to " + this.showDropMenu);
     	this.showDropMenu = !this.showDropMenu;
     },
     closeMenuDrop(e){
       if (!this.$el.contains(e.target)) {
+        console.log("Closing Menu Drop");
         this.showDropMenu = false;
+        console.log("Menu Drop = " + this.showDropMenu);
       }
     },
     addTask(task) {
@@ -51,18 +55,6 @@ export default {
   },
   created() {
     window.addEventListener("click", this.closeMenuDrop);
-
-    this.tasks = [
-    {
-      id: 1,
-      text: 'test',
-      reminder: 'true'
-    },
-    {
-      id: 2,
-      text: 'task',
-      reminder: 'false',
-    }]
   },
   beforeDestroy() {
     window.removeEventListener("click", this.close);
