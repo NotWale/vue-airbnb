@@ -1,12 +1,10 @@
 <template>
   <div class="mt-20 sm:mx-4 md:mx-28 mx-2">
     <Navbar @open-menu-drop="toggleMenuDrop()" />
-    <div class="float-right" >
-      <MenuDrop v-show="showDropMenu" />
-    </div>
-    <SideMenu />
-    <Main />
-    <Footer />
+    <MenuDrop class="hidden md:block duration-200 right-28" :class="showDropMenu ? 'animate-crash -translate-y-[0%]' : 'translate-y-[360%]'" />
+    <SideMenu @click="closeMenuOnClick()"/>
+    <Main @click="closeMenuOnClick()"/>
+    <Footer @click="closeMenuOnClick()"/>
   </div>
 </template>
 
@@ -26,6 +24,7 @@ export default {
     Main,
     Footer
   },
+  el: "#app",
   data() {
     return {
       showDropMenu: false,
@@ -41,6 +40,9 @@ export default {
         this.showDropMenu = false;
       }
     },
+    closeMenuOnClick(){
+      this.showDropMenu = false;
+    },
     openSearch() {
     	this.showBigSearch = !this.showBigSearch;
     },
@@ -49,7 +51,7 @@ export default {
     window.addEventListener("click", this.closeMenuDrop);
   },
   beforeDestroy() {
-    window.removeEventListener("click", this.close);
+    window.removeEventListener("click", this.closeMenuDrop);
   },
 }
 </script>

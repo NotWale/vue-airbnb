@@ -2,7 +2,7 @@
     <div class="flex md:justify-between border-b-[1px] h-20 border-gray-200 py-4 fixed overflow-hidden top-0 w-full bg-white z-50" :class="[ showBigSearch ? 'transform h-40 duration-300' : 'duration-300']">
         <img class="hidden md:flex mt-[3px] w-10 h-10" src="../assets/airbnb-logo.jpg" alt="airbnb-logo">
         <div class="invisible xl:ml-32 lg:ml-12 md:ml-6"></div>
-        <div class="absolute xl:ml-[650px] lg:ml-[500px] space-x-4 mt-2 text-[18px]" :class="showBigSearch ? 'flex' : 'hidden'">
+        <div class="absolute lg:right-1/2 right-1/3 hidden space-x-4 mt-2 text-[18px]" :class="showBigSearch ? 'md:flex' : 'hidden'">
             <button class="border-black border-b-2">
                 Stays
             </button>
