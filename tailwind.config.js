@@ -32,7 +32,10 @@ module.exports = {
         'text-fall': 'text-fall 1s ease-in-out 1',
         'menu-fall': 'menu-fall 1s ease-in-out 1',
         'crash': 'crash 1s',
-      }
+      },
+      screens: {
+        '3xl': {'min': '2036px'},
+      },
     },
   },
   plugins: [],

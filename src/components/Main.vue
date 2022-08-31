@@ -1,7 +1,7 @@
 <template>
     <div class="md:grid block xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 lg:space-x-4 md:space-x-3">
         <li class="mt-8 flex flex-col text-left text-sm" v-for="item in locations" :key="item.id">
-            <img class="h-42 sm:h-48 lg:h-72 w-full rounded-xl" :src="item.ImageURL" :alt="item.ImageALT" />        
+            <img class="h-42 sm:h-48 lg:h-72 3xl:h-[500px] w-full rounded-xl" :src="item.ImageURL" :alt="item.ImageALT" />        
             <p class="font-bold mt-2">{{item.Country}}</p>
             <p class="font-extralight text-gray-500">{{item.Kilometer}} kilometers away</p>
             <p class="font-extralight text-gray-500">{{item.Date}}</p>

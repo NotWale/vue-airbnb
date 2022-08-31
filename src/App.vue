@@ -1,7 +1,7 @@
 <template>
   <div class="mt-20 sm:mx-4 md:mx-28 mx-2">
     <Navbar @open-menu-drop="toggleMenuDrop()" />
-    <MenuDrop class="hidden md:block duration-200 right-28" :class="showDropMenu ? 'animate-crash -translate-y-[0%]' : 'translate-y-[360%]'" />
+    <MenuDrop class="hidden md:block duration-200 right-28" :class="showDropMenu ? 'animate-crash -translate-y-[0%]' : 'bottom-0 translate-y-[360%]'" />
     <SideMenu @click="closeMenuOnClick()"/>
     <Main @click="closeMenuOnClick()"/>
     <Footer @click="closeMenuOnClick()"/>
